@@ -1,1 +1,17 @@
+import React from 'react';
 
+const ExplanationModal = ({ isOpen, explanationText, onClose }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={e => e.stopPropagation()}>
+        <button className="close-button" onClick={onClose}>×</button>
+        <h2>Explanation</h2>
+        <p>{explanationText}</p>
+      </div>
+    </div>
+  );
+};
+
+export default ExplanationModal;

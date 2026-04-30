@@ -192,7 +192,7 @@ export default function QuizScreen({ route, navigation }) {
   if (loading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#007bff" />
+        <ActivityIndicator size="large" color="#4caf50" />
         <Text>Loading question...</Text>
       </View>
     );
@@ -298,48 +298,48 @@ const styles = StyleSheet.create({
     left: 10,
     height: 8,
     width: width * 0.3,
-    backgroundColor: '#ddd',
+    backgroundColor:  '#A52A2A',
     borderRadius: 4,
     overflow: 'hidden',
   },
-  progressBarFill: { height: '100%', backgroundColor: '#4caf50' },
+  progressBarFill: { height: '100%', backgroundColor: '#3C75E0' },
   timerContainer: {
     position: 'absolute',
     top: 10,
     right: 10,
-    backgroundColor: '#f8d7da',
+    backgroundColor: '#D8BFD8',
     paddingHorizontal: 10,
     paddingVertical: 5,
     borderRadius: 5,
   },
-  timerText: { color: '#721c24', fontWeight: 'bold' },
+  timerText: { color: '#4B0082', fontWeight: 'bold' },
   questionContainer: { marginTop: 60, alignItems: 'center', marginBottom: 40 },
   questionText: { fontSize: 22, fontWeight: '600', textAlign: 'center' },
   optionsContainer: { flex: 1 },
   optionsRow: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 20 },
   optionsRowCenter: { flexDirection: 'row', justifyContent: 'center' },
   optionBox: {
-    backgroundColor: '#eee',
+    backgroundColor: '#fff',
     paddingVertical: 20,
     paddingHorizontal: 30,
     borderRadius: 10,
     minWidth: '40%',
     alignItems: 'center',
   },
-  selectedOption: { backgroundColor: '#a7c7e7' },
-  correctOption: { backgroundColor: '#c8e6c9' },
-  incorrectOption: { backgroundColor: '#ffcdd2' },
+  selectedOption: { backgroundColor: '#90ee90' },
+  correctOption: { backgroundColor: '#8a9aaf' },
+  incorrectOption: { backgroundColor: '#D8BFD8' },
   optionText: { fontSize: 18 },
   explanationContainer: {
     position: 'absolute',
     bottom: 80,
     left: 20,
     right: 20,
-    backgroundColor: '#d4edda',
+    backgroundColor: '#ADD8E6',
     padding: 15,
     borderRadius: 10,
   },
-  explanationText: { fontSize: 16, color: '#155724' },
+  explanationText: { fontSize: 16, color: '#00008B' },
   submitButton: {
     position: 'absolute',
     bottom: 20,

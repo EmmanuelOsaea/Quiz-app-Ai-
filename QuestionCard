@@ -1,1 +1,18 @@
+import React from 'react';
 
+const QuestionCard = ({ question, options, onAnswerSelected }) => {
+  return (
+    <div className="question-card">
+      <h2 className="question-text">{question}</h2>
+      <ul className="options-list">
+        {options.map((option, index) => (
+          <li key={index} onClick={() => onAnswerSelected(option)} className="option-item">
+            {option}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default QuestionCard;

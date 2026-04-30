@@ -124,7 +124,7 @@ export default function QuizScreen({ route, navigation }) {
       }
     } catch (e) {
       setLoading(false);
-      Alert.alert('Error', 'Failed to load question. Please try again.');
+      Alert.alert('Error', 'Unable to load question. Please try again.');
     }
   }
 
@@ -345,12 +345,12 @@ const styles = StyleSheet.create({
     bottom: 20,
     left: 20,
     right: 20,
-    backgroundColor: '#007bff',
+    backgroundColor: #00FF00,
     paddingVertical: 15,
     borderRadius: 10,
     alignItems: 'center',
   },
-  disabledButton: { backgroundColor: '#a0a0a0' },
+  disabledButton: { backgroundColor: '#8e8ca1' },
   submitButtonText: { color: '#fff', fontSize: 18 },
   nextButton: {
     position: 'absolute',

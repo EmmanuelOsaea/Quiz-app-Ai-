@@ -1,1 +1,13 @@
+import React from 'react';
 
+const HomeScreen = ({ onStartQuiz, onViewResults }) => {
+  return (
+    <div className="home-screen">
+      <h1>Welcome to the Quiz App</h1>
+      <button onClick={onStartQuiz}>Start Quiz</button>
+      <button onClick={onViewResults}>View Results</button>
+    </div>
+  );
+};
+
+export default HomeScreen;

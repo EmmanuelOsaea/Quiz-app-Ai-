@@ -9,8 +9,7 @@ const HomeScreen = ({ onStartQuiz, onPauseQuiz, onResumeQuiz,  onViewResults }) 
       <button onClick={onResumeQuiz}>Resume Quiz</button>
       <button onClick={onEndQuiz}>End Quiz</button>
       <button onClick={onViewResults}>View Results</button>
-   
-</div>
+   </div>
   );
 };
 

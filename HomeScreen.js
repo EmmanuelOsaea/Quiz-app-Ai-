@@ -4,8 +4,10 @@ const HomeScreen = ({ onStartQuiz, onPauseQuiz, onResumeQuiz,  onViewResults }) 
   return (
     <div className="home-screen">
       <h1>Welcome to the Quiz App</h1>
-      <button onClick={onStartQuiz}>Start Quiz</button>
-      <button onClick={onPauseQuiz}>Pause Quiz</button>
+{quizState === 'notStarted' && <button onClick={onStartQuiz}>Start Quiz</button>
+{quizState === 'running' && (
+  <>
+  <button onClick={onPauseQuiz}>Pause Quiz</button>
       <button onClick={onResumeQuiz}>Resume Quiz</button>
       <button onClick={onEndQuiz}>End Quiz</button>
       <button onClick={onViewResults}>View Results</button>

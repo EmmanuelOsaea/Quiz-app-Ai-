@@ -14,7 +14,7 @@ const HomeScreen = ({ onStartQuiz, onPauseQuiz, onResumeQuiz,  onViewResults }) 
       {quizState === 'paused' && (
         <>
   <button onClick={onResumeQuiz}>Resume Quiz</button>
-  <button onClick={onViewResults}>View Results</button>
+  <button onClick={onViewResults}>End Quiz</button>
  </>
   )}
   <button onClick={onViewResults}>View Results</button>

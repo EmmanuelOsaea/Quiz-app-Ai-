@@ -28,3 +28,4 @@ function QuizDisplay({ questions }) {
 }
 
 export default QuizDisplay;
+

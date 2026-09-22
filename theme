@@ -1,1 +1,50 @@
+@plug "daisyui/theme" {
+name: "caramellatte";
+default: true;
+prefersdark: false; 
+color scheme: "light";
+
+
+
+
+
+
+
+
+@plugin "daisyui/theme" {
+  name: "caramellatte"; /* 1. Name your custom theme here */
+  default: true;        /* Set to true if this is your default theme */
+  prefersdark: false;
+  color-scheme: "light";
+
+  /* 2. Base/Background Colors (Latte and Cream tones) */
+  --color-base-100: oklch(97% 0.015 75);      /* Warm cream background */
+  --color-base-200: oklch(93% 0.02 75);       /* Slightly darker cream for cards */
+  --color-base-300: oklch(88% 0.03 75);       /* Deep cream for borders/dividers */
+  --color-base-content: oklch(25% 0.04 60);   /* Dark espresso text for high readability */
+
+  /* 3. Primary & Accent Colors (Rich Caramel & Coffee) */
+  --color-primary: oklch(50% 0.12 65);        /* Warm Caramel Brown */
+  --color-primary-content: oklch(98% 0.01 75);/* Crisp light text inside primary buttons */
+  --color-secondary: oklch(65% 0.10 70);      /* Milky Latte Brown */
+  --color-secondary-content: oklch(20% 0.04 60);
+  --color-accent: oklch(78% 0.11 85);         /* Light Golden Honey Accent */
+  --color-accent-content: oklch(30% 0.05 70);
+
+  /* 4. Functional UI Feedback Colors */
+  --color-info: oklch(72% 0.11 230);
+  --color-info-content: oklch(25% 0.06 240);
+  --color-success: oklch(74% 0.14 140);       /* Muted Green for correct answers */
+  --color-success-content: oklch(28% 0.07 145);
+  --color-warning: oklch(82% 0.15 90);
+  --color-warning-content: oklch(38% 0.09 85);
+  --color-error: oklch(68% 0.17 25);          /* Muted Crimson for incorrect answers */
+  --color-error-content: oklch(25% 0.09 20);
+
+  /* 5. UI Elements Customization (Optional) */
+  --radius-selector: 0.75rem;                 /* Makes checkboxes/radios softer */
+  --radius-field: 0.5rem;                     /* Input field roundness */
+  --radius-box: 1rem;                         /* Quiz card roundness */
+  --border: 1px;
+}
 

@@ -10,19 +10,34 @@ export function useAgent() {
     setAgentFeedback('Agent is verifying your submission...');
 
     try {
-      // Replace with your actual agent endpoint or LLM SDK call
-      const response = await fetch('/api/agent/grade', {
+      // 1. Point this directly to your local or deployed backend endpoint
+      const response = await fetch('/api/quiz/grade', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question, answer: userAnswer }),
+        headers: { 
+          'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify({ 
+          questionText: question.text, 
+          correctAnswer: question.correctAnswer,
+          userAnswer: userAnswer 
+        }),
       });
+
+      if (!response.ok) {
+        throw new Error('Server responded with an error');
+      }
+
+      // 2. Parse the payload coming back from your LLM backend
       const data = await response.json();
       
-      setAgentFeedback(data.explanation); // "Correct! You remembered that..."
-      return data.isCorrect;
+      // Update state with the explanation the LLM generated
+      setAgentFeedback(data.explanation); 
+      return data.isCorrect; // returns true or false to your component
+
     } catch (error) {
-      console.error('Agent error:', error);
-      setAgentFeedback('Failed to get agent feedback.');
+      console.error('Agent connectivity error:', error);
+      setAgentFeedback('Failed to get feedback from the AI agent.');
+      return false;
     } finally {
       setAgentStatus('idle');
     }
@@ -30,4 +45,3 @@ export function useAgent() {
 
   return { askAgentToGrade, agentFeedback };
 }
-

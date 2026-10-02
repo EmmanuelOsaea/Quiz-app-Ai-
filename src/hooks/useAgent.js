@@ -1,17 +1,19 @@
+ // src/hooks/useAgent.js
 import { useState } from 'react';
 import { useQuizContext } from './useQuizContext';
+import { OPENAI_AGENT_ENDPOINTS } from '../config/apiConfig'; 
 
 export function useAgent() {
   const { setAgentStatus } = useQuizContext();
   const [agentFeedback, setAgentFeedback] = useState('');
 
-  const askAgentToGrade = async (question, userAnswer) => {
+  const askOpenAiToGrade = async (question, userAnswer) => {
     setAgentStatus('grading');
-    setAgentFeedback('Agent is verifying your submission...');
+    setAgentFeedback('Sending answer to OpenAI agent...');
 
     try {
-      // 1. Point this directly to your local or deployed backend endpoint
-      const response = await fetch('/api/quiz/grade', {
+      // Points exactly to your backend route via the constant
+      const response = await fetch(OPENAI_AGENT_ENDPOINTS.GRADE_ANSWER, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json' 
@@ -24,24 +26,22 @@ export function useAgent() {
       });
 
       if (!response.ok) {
-        throw new Error('Server responded with an error');
+        throw new Error('Network error or server failed to respond.');
       }
 
-      // 2. Parse the payload coming back from your LLM backend
-      const data = await response.json();
-      
-      // Update state with the explanation the LLM generated
+      const data = await response.json(); // Parses { isCorrect, explanation }
       setAgentFeedback(data.explanation); 
-      return data.isCorrect; // returns true or false to your component
+      return data.isCorrect; 
 
     } catch (error) {
-      console.error('Agent connectivity error:', error);
-      setAgentFeedback('Failed to get feedback from the AI agent.');
+      console.error('OpenAI proxy integration error:', error);
+      setAgentFeedback('Failed to receive response from OpenAI.');
       return false;
     } finally {
       setAgentStatus('idle');
     }
   };
 
-  return { askAgentToGrade, agentFeedback };
+  return { askOpenAiToGrade, agentFeedback };
 }
+                        

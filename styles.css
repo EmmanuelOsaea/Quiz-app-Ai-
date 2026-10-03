@@ -8,7 +8,7 @@
 
   /* AI Agent Accent Colors */
   --agent-primary: #b94b00;     /* Burnt Orange for AI/Agent identity */
-  --agent-accent: #605dff;      /* Electric Indigo for secondary highlights, where i stopped  */
+  --agent-accent: #605dff;      /* Electric Indigo for secondary highlights */
 
   /* Interactive Quiz State Colors */
   --quiz-correct: #10b981;      /* Emerald green for correct choice */
@@ -16,8 +16,8 @@
   --quiz-neutral-border: #334155; /* Default unselected answer border */
 
   /* Global Layout Properties */
-  --border-radius: 12px;
-  --transition-speed: 0.2s;
+  --border-radius: 12.2px;
+  --transition-speed: 0.1s;
 }
 
 /* 2. BASE RESET & GLOBAL STYLES */
@@ -35,7 +35,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 1.5;
+  line-height: 1.7; stopped here
 }
 
 /* 3. CORE QUIZ APPLICATION STYLES */

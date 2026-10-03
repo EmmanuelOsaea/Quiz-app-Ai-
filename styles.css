@@ -4,11 +4,11 @@
   --bg-color: #2d1b4e;        /* Synthwave background */
   --surface-color: #212121;     /* Halloween color cards and containers */
   --text-main: #f8fafc;         /* Ultra-readable white for text */
-  --text-muted: #94a3b8;        /* Soft gray for timers/labels */
+  --text-muted: #f82834;        /* Crimson red for timers/labels */
 
   /* AI Agent Accent Colors */
-  --agent-primary: #8b5cf6;     /* Electric violet for AI/Agent identity */
-  --agent-accent: #06b6d4;      /* Cyber teal for secondary highlights */
+  --agent-primary: #b94b00;     /* Burnt Orange for AI/Agent identity */
+  --agent-accent: #605dff;      /* Electric Indigo for secondary highlights, where i stopped  */
 
   /* Interactive Quiz State Colors */
   --quiz-correct: #10b981;      /* Emerald green for correct choice */

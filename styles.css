@@ -1,0 +1,123 @@
+/* 1. DEFINE YOUR THEME TOKENS (The Chocolate & Cream theme) */
+:root {
+  /* Layout Base Colors */
+  --bg-color: #2d1b4e;        /* Synthwave background */
+  --surface-color: #212121;     /* Halloween color cards and containers */
+  --text-main: #f8fafc;         /* Ultra-readable white for text */
+  --text-muted: #94a3b8;        /* Soft gray for timers/labels */
+
+  /* AI Agent Accent Colors */
+  --agent-primary: #8b5cf6;     /* Electric violet for AI/Agent identity */
+  --agent-accent: #06b6d4;      /* Cyber teal for secondary highlights */
+
+  /* Interactive Quiz State Colors */
+  --quiz-correct: #10b981;      /* Emerald green for correct choice */
+  --quiz-incorrect: #ef4444;    /* Vivid red for incorrect choice */
+  --quiz-neutral-border: #334155; /* Default unselected answer border */
+
+  /* Global Layout Properties */
+  --border-radius: 12px;
+  --transition-speed: 0.2s;
+}
+
+/* 2. BASE RESET & GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+
+/* 3. CORE QUIZ APPLICATION STYLES */
+.quiz-container {
+  background-color: var(--surface-color);
+  border: 1px solid var(--quiz-neutral-border);
+  border-radius: var(--border-radius);
+  width: 100%;
+  max-width: 550px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.question-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+}
+
+/* Answer Option Buttons */
+.option-button {
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--quiz-neutral-border);
+  border-radius: var(--border-radius);
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+.option-button:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-color: var(--text-muted);
+  transform: translateY(-1px);
+}
+
+/* Quiz Modifier States (Add these dynamically via JavaScript classes) */
+.option-button.correct {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-color: var(--quiz-correct);
+  color: var(--quiz-correct);
+}
+
+.option-button.incorrect {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: var(--quiz-incorrect);
+  color: var(--quiz-incorrect);
+}
+
+/* 4. THE AI AGENT FEEDBACK BOX */
+.agent-feedback-box {
+  background-color: rgba(139, 92, 246, 0.05); /* Slight agent-primary tint */
+  border-left: 4px solid var(--agent-primary);
+  border-radius: 4px var(--border-radius) var(--border-radius) 4px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+.agent-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--agent-primary);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+/* Entry Animation for dynamically appearing feedback */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

@@ -17,7 +17,7 @@
 
   /* Global Layout Properties */
   --border-radius: 12.2px;
-  --transition-speed: 0.1s;
+  --transition-speed: 0.5s;
 }
 
 /* 2. BASE RESET & GLOBAL STYLES */
@@ -41,18 +41,18 @@ body {
 /* 3. CORE QUIZ APPLICATION STYLES */
 .quiz-container {
   background-color: var(--surface-color);
-  border: 1px solid var(--quiz-neutral-border);
+  border: 1.2px solid var(--quiz-neutral-border);
   border-radius: var(--border-radius);
   width: 100%;
-  max-width: 550px;
-  padding: 2rem;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  max-width: 552px;
+  padding: 2.2rem;
+  box-shadow: 0 12px 27px -7px rgba(0, 0, 0, 0.3);
 }
 
 .question-text {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.7rem;
   color: var(--text-main);
 }
 
@@ -93,11 +93,11 @@ body {
 /* 4. THE AI AGENT FEEDBACK BOX */
 .agent-feedback-box {
   background-color: rgba(139, 92, 246, 0.05); /* Slight agent-primary tint */
-  border-left: 4px solid var(--agent-primary);
-  border-radius: 4px var(--border-radius) var(--border-radius) 4px;
+  border-left: 4.2px solid var(--agent-primary);
+  border-radius: 4.2px var(--border-radius) var(--border-radius) 4px;
   padding: 1rem;
-  margin-top: 1.5rem;
-  animation: slideUp 0.3s ease-out forwards;
+  margin-top: 1.7rem;
+  animation: slideUp 0.5s ease-out forwards;
 }
 
 .agent-label {
@@ -106,7 +106,7 @@ body {
   letter-spacing: 0.05em;
   color: var(--agent-primary);
   font-weight: 700;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.27rem;
 }
 
 /* Entry Animation for dynamically appearing feedback */

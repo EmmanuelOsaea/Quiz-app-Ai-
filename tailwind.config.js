@@ -13,10 +13,10 @@ module.exports = {
         
         // --- CAKE THEME TOKENS ---
         cake: {
-          background: '   ', // Soft frosting pink
-          primary: '  ',    // Strawberry pink
-          secondary: '  ',  // Pastel accent
-          text: '   ',       // Deep berry text
+          background: '#2d1b4e',       // Synthwave background 
+          primary: '#b94b00',    // Burnt orange
+          secondary: '#605dff',  // Electric indigo
+          text: '#f8fafc',       // Ultra readable white text
         },
       },
     },
@@ -25,4 +25,4 @@ module.exports = {
 
 
 
-            
+     

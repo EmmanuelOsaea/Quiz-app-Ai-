@@ -1,20 +1,28 @@
-// tailwind.config.js
+// my-theme-config.js
 module.exports = {
   theme: {
     extend: {
       colors: {
-        // Both themes are defined right here in one place!
+        // --- COFFEE THEME TOKENS ---
         coffee: {
-          dark: '#2c1d11',
-          beans: '#6f4e37',
-          latte: '#b87d4b',
+          background: '  ', // Creamy white
+          primary: '   ',    // Espresso brown
+          secondary: '   ',  // Latte accent
+          text: '   ',       // Dark roasted text
         },
+        
+        // --- CAKE THEME TOKENS ---
         cake: {
-          berry: ' ',
-          strawberry: '',
-          frosting: ' ',
-        }
-      }
-    }
-  }
+          background: '   ', // Soft frosting pink
+          primary: '  ',    // Strawberry pink
+          secondary: '  ',  // Pastel accent
+          text: '   ',       // Deep berry text
+        },
+      },
+    },
+  },
 }
+
+
+
+            

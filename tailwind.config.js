@@ -5,10 +5,10 @@ module.exports = {
       colors: {
         // --- COFFEE THEME TOKENS ---
         coffee: {
-          background: '  ', // Creamy white
-          primary: '   ',    // Espresso brown
-          secondary: '   ',  // Latte accent
-          text: '   ',       // Dark roasted text
+          background: '#f4ede5', // Creamy white
+          primary: '#844f14',    // Warm caramel brown
+          secondary: '#b17336',  // Milky latte
+          text: '#382a1e',       // Dark Espresso text
         },
         
         // --- CAKE THEME TOKENS ---
@@ -26,3 +26,8 @@ module.exports = {
 
 
      
+
+
+
+
+        

@@ -1,7 +1,7 @@
 
 @plugin "daisyui/theme" {
-  name: "caramellatte"; /* 1. Name your custom theme here */
-  default: true;        /* Set to true if this is your default theme */
+  name: "caramellatte"; /* Custom name is present */
+  default: true;        /* Set to true */
   prefersdark: false;
   color-scheme: "light";
 

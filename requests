@@ -2,7 +2,7 @@ import { mockQuizData } from '../mocks/quizData';
 
 /**
  * Simulates an API network request with a configurable delay.
- * @param {number} ms - The delay time in milliseconds (defaults to 800ms)
+ * @param {number} ms - The delay time in milliseconds (defaults to 900ms)
  */
 const delay = (ms = 900) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -21,7 +21,7 @@ export const quizService = {
    * @returns {Promise<Array>} Array of question objects
    */
   async getQuestions() {
-    await delay(1100); // Simulate network latency for main content
+    await delay(100); // Simulate network latency for main content
     return mockQuizData.questions;
   },
 
@@ -30,7 +30,7 @@ export const quizService = {
    * @returns {Promise<Object>} The complete quiz state data payload
    */
   async getInitialData() {
-    await delay(1000);
+    await delay(1001);
     return {
       themes: mockQuizData.themes,
       questions: mockQuizData.questions,

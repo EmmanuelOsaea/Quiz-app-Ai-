@@ -19,8 +19,8 @@ export interface ThemePalette {
 }
 
 export const THEME_PALETTES: Record<string, ThemePalette> = {
-  // 
-  : {
+  
+ Coffee : {
     id: ".   ",
     name: ".      ",
     bgPage: {

@@ -20,9 +20,9 @@ export interface ThemePalette {
 
 export const THEME_PALETTES: Record<string, ThemePalette> = {
   
- Coffee : {
-    id: ".   ",
-    name: ".      ",
+ Coffee: {
+    id: "coffee",
+    name: "Coffee & Cakes",
     bgPage: {
       light: "oklch( ) ",     
       dark: "oklch(   )",     

@@ -24,8 +24,8 @@ export const THEME_PALETTES: Record<string, ThemePalette> = {
     id: "coffee";
     name: "Coffee & Cakes";
     bgPage: {
-      light: "oklch(95% 0.013 73);      /* Warm cream background */  
-      dark: "oklch( oklch(93% 0.02 73);       /* Slightly darker cream for cards */    
+      light: "oklch(95% 0.013 73)";      /* Warm cream background */  
+      dark: "oklch(93% 0.02 73)";       /* Slightly darker cream for cards */    
     },
     bgSurface: {
       light: "oklch(0.80 0.10 64.9)";     // Caramel Ice Cream (#ECAF73)
@@ -52,8 +52,8 @@ export const THEME_PALETTES: Record<string, ThemePalette> = {
       dark: "oklch(0.81 0.15 73.5)";      // Smooth Orange-Gold (#F9B042)
     },
     success: {
-      light: "oklch(0.57 0.16 138.8)";   // Forest Green (#228B22)
-      dark: "oklch(0.76 0.22 136.0)";    // Lime Green (#32CD32)
+      light: "oklch(72% 0.14 138)";       /* Muted Green for correct answers */         )";   // Forest Green (#228B22)
+      dark: "oklch(26% 0.07 143)";    
     }
   },
 

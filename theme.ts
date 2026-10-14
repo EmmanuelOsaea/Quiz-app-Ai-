@@ -1,6 +1,6 @@
 
 @plugin "daisyui/theme" {
-  name: "caramellatte"; /* Custom name is present */
+  name: "coffee & cake"; /* Custom name is present */
   default: true;        /* Set to true */
   prefersdark: false;
   color-scheme: "light";

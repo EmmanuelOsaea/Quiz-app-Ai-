@@ -24,15 +24,15 @@ export const THEME_PALETTES: Record<string, ThemePalette> = {
     id: "coffee",
     name: "Coffee & Cakes",
     bgPage: {
-      light: "oklch( ) ",     
-      dark: "oklch(   )",     
+      light: "oklch(95% 0.013 73);      /* Warm cream background */              ) ",     
+      dark: "oklch( oklch(93% 0.02 73);       /* Slightly darker cream for cards */  )",     
     },
     bgSurface: {
       light: "oklch(0.80 0.10 64.9)",     // Caramel Ice Cream (#ECAF73)
       dark: "oklch(0.38 0.14 43.1)",      // Dark Crispy Brown (#813B10)
     },
     borderSubtle: {
-      light: "oklch(0.85 0.00 0.0)",      // Light Ash (#D2D2D2)
+      light: "oklch(86% 0.03 73)",      // Deep cream for borders/dividers
       dark: "oklch(0.77 0.01 154.9)",     // Ash Gray (#B2BEB5)
     },
     textPrimary: {
@@ -40,7 +40,7 @@ export const THEME_PALETTES: Record<string, ThemePalette> = {
       dark: "oklch(0.98 0.01 79.8)",      // Buttermilk Cream
     },
     textSecondary: {
-      light: "oklch(0.38 0.14 43.1)",     // Dark Crispy Brown (#813B10)
+      light: "oklch(23% 0.04 58);   /* Dark espresso text for high readability */          ",     // Dark Crispy Brown (#813B10)
       dark: "oklch(0.75 0.13 80.0)",      // Crispy Chicken Skin (Light)
     },
     brandPrimary: {

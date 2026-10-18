@@ -1,5 +1,5 @@
-// agents/ContentCuratorAgent.js
-import { callLLM } from '../utils/llm.js';
+// agents/ContentCuratorAgent.tsx
+import { callLLM } from '../utils/llm.tsx';
 
 export class ContentCuratorAgent {
   /**

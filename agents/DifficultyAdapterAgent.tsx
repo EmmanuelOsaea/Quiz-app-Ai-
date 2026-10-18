@@ -1,5 +1,5 @@
-// agents/DifficultyAdapterAgent.js
-import { callLLM } from '../utils/llm.js';
+// agents/DifficultyAdapterAgent.tsx
+import { callLLM } from '../utils/llm.tsx';
 
 export class DifficultyAdapterAgent {
   /**

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-type Step = 'TRIAGE' | 'INSPECT' | 'SUMMARIZE' | 'PROPOSE' | 'VALIDATE' | 'DONE';
+type Step = 'CONTENTCURATOR' | 'DIFFICULTYADAPTER' | 'SUMMARIZE' | 'PROPOSE' | 'VALIDATE' | 'DONE';
 
 export default function App() {
   const [currentStep, setCurrentStep] = useState<Step>('TRIAGE');
